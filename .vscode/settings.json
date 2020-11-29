@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "node_modules/*": true,
+    "public/build": true,
+    "coverage/*": true
+  },
+  "sasslint.enable": true,
+  "[svelte]": {
+    "editor.rulers": [100],
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "search.exclude": {
+    "node_modules/*": true,
+    "dist/*": true,
+    "coverage/*": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
