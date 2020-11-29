@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 
+const createPreprocessors = require('./svelte.config').createPreprocessors
 const production = !process.env.ROLLUP_WATCH
 
 function serve() {
@@ -48,6 +49,7 @@ export default {
       css: (css) => {
         css.write('bundle.css')
       },
+      preprocess: createPreprocessors(!production),
     }),
 
     // If you have external dependencies installed from

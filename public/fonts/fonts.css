@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Basier Square';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./basiersquare-regular-webfont.woff2') format('woff2'),
+    url('./basiersquare-regular-webfont.woff') format('woff'),
+    url('./basiersquare-regular-webfont.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Basier Square';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./basiersquare-bold-webfont.woff2') format('woff2'),
+    url('./basiersquare-bold-webfont.woff') format('woff'),
+    url('./basiersquare-bold-webfont.eot') format('embedded-opentype');
+}
