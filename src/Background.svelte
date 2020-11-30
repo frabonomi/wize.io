@@ -30,18 +30,19 @@
     background-color: #e4eef1;
     border-radius: 50%;
     height: var(--circle-size);
-    left: 12vw !important;
+    left: 14vw !important;
     position: absolute;
     top: -90vw !important;
-    width: var(--circle-size);
+    width: 200vw;
   }
 
   #picture {
-    position: absolute;
+    display: none;
     left: 25% !important;
     opacity: 0.4;
+    position: absolute;
     top: 82% !important;
-    width: 450px;
+    width: 50vw;
   }
 
   #circle-inner {
@@ -50,6 +51,17 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  @media (min-width: 600px) {
+    #picture {
+      display: block;
+      width: 450px;
+    }
+
+    #circle {
+      width: var(--circle-size);
+    }
   }
 </style>
 

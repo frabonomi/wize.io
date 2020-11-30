@@ -16,7 +16,7 @@
   .w-app__container {
     margin: 0 auto;
     padding: 2rem;
-    max-width: 90%;
+    max-width: 100%;
     width: 960px;
   }
 
@@ -25,8 +25,12 @@
     width: 6rem;
   }
 
+  .w-app__paragraphs {
+    margin-top: 3rem;
+  }
+
   .w-app__actions {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .w-app__button {
@@ -39,7 +43,7 @@
   }
 
   h1 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     letter-spacing: 0.015em;
     line-height: 1.2;
     margin-top: 4rem;
@@ -59,6 +63,12 @@
     color: inherit;
     text-decoration: underline;
   }
+
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 2.75rem;
+    }
+  }
 </style>
 
 <main class="w-app">
@@ -74,27 +84,29 @@
         technology.</em>
     </h1>
 
-    <p>My name is Francesco.</p>
-    <p>
-      Currently I'm working at
-      <a href="https://stampit.co" target="_blank">Stamp</a>.
-    </p>
+    <div class="w-app__paragraphs">
+      <p>My name is Francesco.</p>
+      <p>
+        Currently I'm working at
+        <a href="https://stampit.co?ref=wize.io" target="_blank">Stamp</a>.
+      </p>
+    </div>
 
     <div class="w-app__actions">
       <a
-        href="https://github.com/frabonomi"
+        href="https://github.com/frabonomi?ref=wize.io"
         target="_blank"
         class="w-app__button">
         <box-icon type="logo" name="github" size="lg" />
       </a>
       <a
-        href="https://www.linkedin.com/in/fbonomi/"
+        href="https://www.linkedin.com/in/fbonomi/?ref=wize.io"
         target="_blank"
         class="w-app__button">
         <box-icon name="linkedin-square" type="logo" size="lg" />
       </a>
       <a
-        href="https://twitter.com/frabonomi"
+        href="https://twitter.com/frabonomi?ref=wize.io"
         target="_blank"
         class="w-app__button">
         <box-icon name="twitter" type="logo" size="lg" />
