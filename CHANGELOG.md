@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.2](https://github.com/frabonomi/wize.io/compare/v0.9.1...v0.9.2) (2020-11-30)
+
+
+### Features
+
+* add Google Analytics ([#2](https://github.com/frabonomi/wize.io/issues/2)) ([d940cb9](https://github.com/frabonomi/wize.io/commit/d940cb9ec395877d1914db0c63ed1f0823205412))
+
 ### [0.9.1](https://github.com/frabonomi/wize.io/compare/v0.9.0...v0.9.1) (2020-11-30)
 
 
