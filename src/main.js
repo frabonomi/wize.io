@@ -14,6 +14,5 @@ mixpanel.init(
   { api_host: 'https://api-eu.mixpanel.com' },
   ''
 )
-mixpanel.track_pageview()
 
 export default app
