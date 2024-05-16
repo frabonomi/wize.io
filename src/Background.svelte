@@ -39,7 +39,7 @@
   #picture {
     display: none;
     left: 25% !important;
-    opacity: 0.4;
+    opacity: 0.25;
     position: absolute;
     top: 82% !important;
     width: 50vw;
