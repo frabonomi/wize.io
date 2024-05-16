@@ -10,6 +10,7 @@
   }
 
   .w-app {
+    height: 100vh;
     position: relative;
   }
 
@@ -85,10 +86,9 @@
     </h1>
 
     <div class="w-app__paragraphs">
-      <p>My name is Francesco.</p>
+      <p>Hey there, my name is Francesco.</p>
       <p>
-        Currently I'm working at
-        <a href="https://stampit.co?ref=wize.io" target="_blank">Stamp</a>.
+        I'm a software developer and UX/UI designer.
       </p>
     </div>
 
