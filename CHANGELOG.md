@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.3](https://github.com/frabonomi/wize.io/compare/v0.9.2...v0.9.3) (2024-05-16)
+
+
+### Chores
+
+* update copy and improve contrast ([#3](https://github.com/frabonomi/wize.io/issues/3)) ([3ac3340](https://github.com/frabonomi/wize.io/commit/3ac334086cc878c7348427887d348c04e5c37318))
+
 ### [0.9.2](https://github.com/frabonomi/wize.io/compare/v0.9.1...v0.9.2) (2020-11-30)
 
 
