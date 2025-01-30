@@ -25,7 +25,7 @@
 
     <div class="w-app__actions">
       <a
-        href="https://github.com/frabonomi?ref=wize.io"
+        href="https://github.com/frabonomi"
         target="_blank"
         class="w-app__button"
       >
@@ -33,18 +33,14 @@
       </a>
       •
       <a
-        href="https://www.linkedin.com/in/fbonomi/?ref=wize.io"
+        href="https://www.linkedin.com/in/fbonomi/"
         target="_blank"
         class="w-app__button"
       >
         LinkedIn
       </a>
       •
-      <a
-        href="https://twitter.com/frabonomi?ref=wize.io"
-        target="_blank"
-        class="w-app__button"
-      >
+      <a href="https://x.com/frabonomi" target="_blank" class="w-app__button">
         Twitter
       </a>
     </div>
@@ -89,12 +85,16 @@
   }
 
   .w-app__actions {
+    align-items: center;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
     margin-top: 3rem;
   }
 
   .w-app__button {
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.25rem;
+
     &:hover,
     &:focus {
       background-color: #2e3038;
