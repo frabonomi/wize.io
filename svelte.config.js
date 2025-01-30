@@ -1,9 +1,12 @@
 const preprocess = require('svelte-preprocess')
+const postcssNesting = require('postcss-nesting')
 
 function createPreprocessors(sourceMap) {
   return preprocess({
     sourceMap,
-    postcss: true,
+    postcss: {
+      plugins: [postcssNesting()],
+    },
   })
 }
 
