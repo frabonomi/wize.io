@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.4](https://github.com/frabonomi/wize.io/compare/v0.9.2...v0.9.4) (2025-01-30)
+
+
+### Bug Fixes
+
+* switch to text links ([#4](https://github.com/frabonomi/wize.io/issues/4)) ([8943ba1](https://github.com/frabonomi/wize.io/commit/8943ba180fa53496e34f82a698c3e445bd8c7702))
+
 ### [0.9.3](https://github.com/frabonomi/wize.io/compare/v0.9.2...v0.9.3) (2024-05-16)
 
 
