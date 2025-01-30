@@ -3,7 +3,61 @@
   import Background from './Background.svelte'
 </script>
 
+<main class="w-app">
+  <Background />
+
+  <div class="w-app__container">
+    <div class="w-app__logo">
+      <Logo />
+    </div>
+    <h1>
+      I help businesses develop products that people enjoy using.
+      <em
+        >I believe in thoughtful and honest design that makes people love
+        technology.</em
+      >
+    </h1>
+
+    <div class="w-app__paragraphs">
+      <p>Hey there, my name is Francesco.</p>
+      <p>I'm a software developer and UX/UI designer.</p>
+    </div>
+
+    <div class="w-app__actions">
+      <a
+        href="https://github.com/frabonomi"
+        target="_blank"
+        class="w-app__button"
+      >
+        GitHub
+      </a>
+      •
+      <a
+        href="https://www.linkedin.com/in/fbonomi/"
+        target="_blank"
+        class="w-app__button"
+      >
+        LinkedIn
+      </a>
+      •
+      <a href="https://x.com/frabonomi" target="_blank" class="w-app__button">
+        Twitter
+      </a>
+    </div>
+  </div>
+</main>
+
 <style lang="postcss">
+  :focus {
+    outline: 2px solid #2e3038;
+    outline-offset: 0.15rem;
+  }
+
+  *::selection {
+    background-color: #2e3038;
+    color: #fff;
+  }
+
   main {
     color: #2e3038;
     font-family: 'Basier Square';
@@ -31,12 +85,22 @@
   }
 
   .w-app__actions {
+    align-items: center;
+    display: flex;
+    gap: 0.25rem;
     margin-top: 3rem;
   }
 
   .w-app__button {
-    margin-right: 1rem;
-    opacity: 0.7;
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.25rem;
+
+    &:hover,
+    &:focus {
+      background-color: #2e3038;
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   .w-app__button:hover {
@@ -71,46 +135,3 @@
     }
   }
 </style>
-
-<main class="w-app">
-  <Background />
-
-  <div class="w-app__container">
-    <div class="w-app__logo">
-      <Logo />
-    </div>
-    <h1>
-      I help businesses develop products that people enjoy using.
-      <em>I believe in thoughtful and honest design that makes people love
-        technology.</em>
-    </h1>
-
-    <div class="w-app__paragraphs">
-      <p>Hey there, my name is Francesco.</p>
-      <p>
-        I'm a software developer and UX/UI designer.
-      </p>
-    </div>
-
-    <div class="w-app__actions">
-      <a
-        href="https://github.com/frabonomi?ref=wize.io"
-        target="_blank"
-        class="w-app__button">
-        <box-icon type="logo" name="github" size="lg" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/fbonomi/?ref=wize.io"
-        target="_blank"
-        class="w-app__button">
-        <box-icon name="linkedin-square" type="logo" size="lg" />
-      </a>
-      <a
-        href="https://twitter.com/frabonomi?ref=wize.io"
-        target="_blank"
-        class="w-app__button">
-        <box-icon name="twitter" type="logo" size="lg" />
-      </a>
-    </div>
-  </div>
-</main>
