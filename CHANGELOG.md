@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.5](https://github.com/frabonomi/wize.io/compare/v0.9.4...v0.9.5) (2025-02-06)
+
+
+### Features
+
+* add Simple Analytics script ([#5](https://github.com/frabonomi/wize.io/issues/5)) ([e90eeb6](https://github.com/frabonomi/wize.io/commit/e90eeb6a88bcfa424aabef1e28a857e265871947))
+
 ### [0.9.4](https://github.com/frabonomi/wize.io/compare/v0.9.2...v0.9.4) (2025-01-30)
 
 
