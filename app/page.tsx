@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { ElasticProjectLink } from '@/components/ElasticProjectLink'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 import styles from './page.module.css'
@@ -94,9 +95,7 @@ export default function Home() {
           <ul className={styles.projectList}>
             {projects.map((project) => (
               <li key={project.name}>
-                <a href={project.url} rel="noreferrer" target="_blank">
-                  <span>{project.name}</span>
-                </a>
+                <ElasticProjectLink {...project} />
               </li>
             ))}
           </ul>
