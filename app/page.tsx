@@ -6,8 +6,11 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import styles from './page.module.css'
 
 const projects: { name: string; url: string }[] = [
-  { name: 'Mowji', url: 'https://mowji.app/' },
-  { name: 'Sober Ringtones', url: 'https://sober-ringtones.wize.io/' },
+  { name: 'Mowji', url: 'https://mowji.app/?ref=wize.io' },
+  {
+    name: 'Sober Ringtones',
+    url: 'https://sober-ringtones.wize.io/?ref=wize.io',
+  },
 ]
 
 function Wordmark() {
