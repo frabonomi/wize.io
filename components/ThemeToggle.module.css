@@ -1,0 +1,21 @@
+.toggle {
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.66rem;
+  font-variation-settings: 'wght' 700;
+  letter-spacing: 0.16em;
+  padding: 0.35rem;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.toggle:hover {
+  color: var(--foreground);
+  transform: translateY(-0.08rem);
+}
+
+.toggle:active {
+  transform: translateY(0.04rem);
+}
