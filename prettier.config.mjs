@@ -12,10 +12,14 @@ const config = {
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   importOrderSideEffects: false,
-  plugins: ['@trivago/prettier-plugin-sort-imports'],
+  plugins: [
+    '@trivago/prettier-plugin-sort-imports',
+    'prettier-plugin-css-order',
+  ],
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
+  cssDeclarationSorterOrder: 'alphabetical',
 }
 
 export default config
