@@ -4,7 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 
 const funnelSans = localFont({
-  src: './FunnelSans.ttf',
+  src: '../public/fonts/FunnelSans.woff2',
   display: 'swap',
   style: 'normal',
   variable: '--font-funnel-sans',
@@ -32,6 +32,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Francesco Bonomi — Developer and designer',
     description: 'Apps and websites designed and built by Francesco Bonomi.',
+    images: [
+      {
+        url: '/images/opengraph-image.png',
+        alt: 'Francesco Bonomi — Developer and designer',
+        width: 1200,
+        height: 630,
+      },
+    ],
     siteName: 'Wize.io',
     type: 'website',
     url: '/',
@@ -40,6 +48,14 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'Francesco Bonomi — Developer and designer',
     description: 'Apps and websites designed and built by Francesco Bonomi.',
+    images: [
+      {
+        url: '/images/twitter-image.png',
+        alt: 'Francesco Bonomi — Developer and designer',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 }
 
