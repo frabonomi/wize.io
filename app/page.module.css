@@ -17,7 +17,7 @@
 .siteHeader,
 .hero,
 .projects,
-.articles,
+.social,
 .footer {
   padding-inline: var(--page-gutter);
 }
@@ -122,7 +122,10 @@
 
 .blendBlockTop {
   height: 56%;
-  left: -12%;
+  left: -8%;
+  mask-image: url('/images/star.svg');
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
   top: 0;
   width: 59%;
 }
@@ -172,42 +175,48 @@
   width: 100%;
 }
 
-.articles {
+.social {
   padding-bottom: clamp(8rem, 13vw, 12rem);
   padding-top: clamp(7rem, 12vw, 11.5rem);
 }
 
-.articleList {
-  border-bottom: 1px solid var(--divider);
+.social .sectionLabel {
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
 }
 
-.article {
-  align-items: start;
-  border-top: 1px solid var(--divider);
-  display: grid;
+.socialList {
+  align-items: center;
+  display: flex;
   gap: 2rem;
-  grid-template-columns: minmax(0, 1fr) auto;
-  padding: clamp(2rem, 3vw, 2.8rem) 0;
-}
-
-.article h3 {
-  font-size: clamp(1.75rem, 2.55vw, 2.5rem);
-  font-variation-settings: 'wght' 420;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  list-style: none;
   margin: 0;
-  max-width: 58rem;
-  text-wrap: pretty;
+  padding: 0;
 }
 
-.article time {
-  color: var(--muted);
-  font-size: 0.64rem;
-  font-variation-settings: 'wght' 700;
-  letter-spacing: 0.13em;
-  padding-top: 0.42rem;
-  text-transform: uppercase;
+.socialList li {
+  align-items: center;
+  display: flex;
+  font-size: clamp(2.5rem, 4.7vw, 4.75rem);
+  font-variation-settings: 'wght' 420;
+  line-height: 1;
   white-space: nowrap;
+}
+
+.socialList li + li::before {
+  background: var(--project-line);
+  content: '';
+  display: block;
+  height: clamp(0.6rem, 1.1vw, 1rem);
+  margin-right: 2rem;
+  width: clamp(0.6rem, 1.1vw, 1rem);
+}
+
+.socialList a {
+  transition: color 180ms ease;
+}
+
+.socialList a:hover {
+  color: var(--accent);
 }
 
 .footer {
@@ -241,7 +250,7 @@
 
   .blendBlockTop {
     height: 45%;
-    left: -5%;
+    left: -1%;
     top: 7%;
     width: 52%;
   }
@@ -256,6 +265,15 @@
   .projects {
     padding-top: 4rem;
   }
+
+  .socialList {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .socialList li + li::before {
+    display: none;
+  }
 }
 
 @media (max-width: 37.5rem) {
@@ -265,22 +283,27 @@
 
   .navigation a,
   .sectionLabel,
-  .article time,
   .wordmark {
     font-size: 0.59rem;
   }
 
-  .articles {
+  .social {
     padding-bottom: 5rem;
     padding-top: 5.5rem;
   }
 
-  .article {
-    gap: 1rem;
+  .socialList {
+    gap: 1.75rem 0.75rem;
   }
 
-  .article h3 {
-    font-size: clamp(1.55rem, 7vw, 2rem);
+  .socialList li {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .socialList li + li::before {
+    height: 0.5rem;
+    margin-right: 0.75rem;
+    width: 0.5rem;
   }
 
   .imageBand {

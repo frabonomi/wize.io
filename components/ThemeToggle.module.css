@@ -1,21 +1,26 @@
 .toggle {
+  align-items: center;
   background: transparent;
-  color: var(--muted);
+  color: var(--foreground);
   cursor: pointer;
-  font-size: 0.66rem;
-  font-variation-settings: 'wght' 700;
-  letter-spacing: 0.16em;
-  padding: 0.35rem;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 2rem;
+  padding: 0.25rem;
+  transition: transform 180ms ease;
 }
 
 .toggle:hover {
-  color: var(--foreground);
   transform: translateY(-0.08rem);
 }
 
 .toggle:active {
   transform: translateY(0.04rem);
+}
+
+.icon {
+  display: block;
+  height: 1.0625rem;
+  width: 1.0625rem;
 }

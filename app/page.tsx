@@ -10,18 +10,6 @@ const projects: { name: string; url: string }[] = [
   { name: 'Sober Ringtones', url: 'https://sober-ringtones.wize.io/' },
 ]
 
-const articles: { date: string; title: string }[] = [
-  {
-    date: 'Yesterday',
-    title:
-      'The UX around Device Control and Data Access (formerly known as Accessibility) permission',
-  },
-  {
-    date: '3 days ago',
-    title: 'The glass looked wrong because the window was behaving correctly',
-  },
-]
-
 function Wordmark() {
   return (
     <span className={styles.wordmark}>
@@ -43,19 +31,14 @@ export default function Home() {
         </a>
 
         <nav aria-label="Primary navigation" className={styles.navigation}>
-          <ThemeToggle />
-          <a href="#articles">Articles</a>
           <a href="mailto:francesco@wize.io">Contact</a>
+          <ThemeToggle />
         </nav>
       </header>
 
       <main id="content">
         <section aria-labelledby="hero-title" className={styles.hero}>
-          <h1
-            aria-label="I'm Francesco, a developer and designer. I build apps and websites for myself and clients."
-            className={styles.heroTitle}
-            id="hero-title"
-          >
+          <h1 className={styles.heroTitle} id="hero-title">
             I’m Francesco, a developer and designer. <br /> I build apps and
             websites for myself and clients.
           </h1>
@@ -107,22 +90,48 @@ export default function Home() {
           />
         </figure>
 
-        <section
-          aria-labelledby="articles-title"
-          className={styles.articles}
-          id="articles"
-        >
-          <h2 className={styles.sectionLabel} id="articles-title">
-            Recent articles
+        <section aria-labelledby="social-title" className={styles.social}>
+          <h2 className={styles.sectionLabel} id="social-title">
+            Follow me
           </h2>
-          <div className={styles.articleList}>
-            {articles.map((article) => (
-              <article className={styles.article} key={article.title}>
-                <h3>{article.title}</h3>
-                <time>{article.date}</time>
-              </article>
-            ))}
-          </div>
+          <ul className={styles.socialList}>
+            <li>
+              <a
+                href="https://x.com/frabonomi"
+                rel="me noreferrer"
+                target="_blank"
+              >
+                X
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mastodon.social/@frabonomi"
+                rel="me noreferrer"
+                target="_blank"
+              >
+                Mastodon
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/frabonomi"
+                rel="me noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/fbonomi/"
+                rel="me noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
 
