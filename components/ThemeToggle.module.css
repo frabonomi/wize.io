@@ -1,0 +1,26 @@
+.toggle {
+  align-items: center;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 2rem;
+  padding: 0.25rem;
+  transition: transform 180ms ease;
+}
+
+.toggle:hover {
+  transform: translateY(-0.08rem);
+}
+
+.toggle:active {
+  transform: translateY(0.04rem);
+}
+
+.icon {
+  display: block;
+  height: 1.0625rem;
+  width: 1.0625rem;
+}
