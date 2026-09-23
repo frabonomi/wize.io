@@ -45,13 +45,7 @@ export default function Home() {
         <nav aria-label="Primary navigation" className={styles.navigation}>
           <ThemeToggle />
           <a href="#articles">Articles</a>
-          <a
-            href="https://www.linkedin.com/in/fbonomi/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Contact
-          </a>
+          <a href="mailto:francesco@wize.io">Contact</a>
         </nav>
       </header>
 
