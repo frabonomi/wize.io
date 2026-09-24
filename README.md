@@ -20,6 +20,29 @@ Open [http://localhost:3000](http://localhost:3000).
 live in `app/_data/links.ts`. Site-wide styles and metadata stay in the root
 layout.
 
+## Articles
+
+Articles live in `content/articles/<slug>/index.mdx`, alongside their images.
+The article's `export const article` object supplies the title, description,
+publication date, tags, and draft state. Register each new MDX file in
+`content/articles/index.ts` so the article list, routes, RSS feed, and sitemap
+use the same content source.
+
+The Mowji article is a draft based on the supplied page preview. Start the dev
+server and open
+`http://localhost:3000/articles/the-glass-looked-wrong` to review it. Drafts
+appear locally but are excluded from production article routes, the RSS feed,
+and the sitemap. Set `draft: false` once the article is complete and ready to
+publish.
+
+Use Markdown code fences with a language name for highlighted code blocks.
+Import local images into the MDX file and render them with `ArticleImage`, which
+accepts `alt`, optional `caption`, and optional `cropped` props. Hosted video can
+use `VideoEmbed` with `provider="youtube"` or `provider="vimeo"`, a `videoId`,
+and a descriptive `title`. Headings at level two receive linkable IDs; for a
+long article, add an optional `toc` array to the article metadata with entries
+matching those IDs.
+
 ## Quality checks
 
 ```bash

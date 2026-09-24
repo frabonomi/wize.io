@@ -1,0 +1,110 @@
+import screenshot from './mowji-settings.jpg';
+
+export const article = {
+  title: 'The glass looked broken because the window was behaving correctly',
+  description:
+    'A visual clue in Mowji revealed how window focus changes the appearance of clear Liquid Glass.',
+  publishedAt: '2026-09-24',
+  tags: ['macOS', 'Mowji'],
+  draft: true,
+};
+
+I’m building [Mowji](https://mowji.app), a macOS utility for finding and inserting emoji while typing.
+
+A person types a trigger inside another app, and Mowji displays a small picker near the text. They can continue typing to search, select an emoji, and carry on in the original app.
+
+There is one important constraint: the picker must not take keyboard focus.
+
+The editor, browser, or messaging app needs to remain focused so Mowji can keep the search synchronized and insert the selected emoji into the correct text field.
+
+This constraint caused a visual problem _I wasn’t expecting_.
+
+<ArticleImage
+  alt="Mowji's settings window showing General, Search, Appearance, and Exclusions panes"
+  cropped
+  src={screenshot}
+/>
+
+## Same picker, two different results
+
+The picker uses SwiftUI’s clear Liquid Glass:
+
+```swift
+.glassEffect(.clear, in: .capsule)
+```
+
+Mowji also has an **Appearance** pane where people can preview the picker over an image before choosing their preferences.
+
+Inside this preview, the glass looked as expected: transparent and refractive, with a bright edge and visible distortion from the image behind it.
+
+The real picker looked much more frosted. It was flatter, more opaque, and closer to the regular glass variant.
+
+At first I suspected a second material behind it, an opaque hosting view, or some difference between the light and dark themes.
+
+None of those was the cause.
+
+## A useful clue
+
+I noticed that the preview changed when the Settings window lost focus.
+
+With Settings focused, the glass looked clear and refractive. After focusing another window, the same preview became frosted—almost identical to the real picker.
+
+The real picker is hosted inside an AppKit panel configured like this:
+
+```swift
+styleMask: [.borderless, .nonactivatingPanel]
+```
+
+It also deliberately prevents itself from becoming key:
+
+```swift
+override var canBecomeKey: Bool {
+    false
+}
+```
+
+This allows the picker to appear above another application without taking its keyboard focus.
+
+Unfortunately, SwiftUI also uses that real AppKit window state when rendering Liquid Glass. Because the panel never becomes key, its glass always receives the inactive appearance.
+
+## What didn’t work
+
+I tried overriding SwiftUI’s active appearance:
+
+```swift
+.environment(\.appearsActive, true)
+```
+
+I also tried:
+
+```swift
+.materialActiveAppearance(.active)
+```
+
+Neither changed the result.
+
+The glass wasn’t following those values. It was following whether the containing AppKit window was actually key.
+
+## Confirming the cause
+
+For one deliberately unsafe test, I allowed the panel to become key:
+
+```swift
+override var canBecomeKey: Bool {
+    true
+}
+```
+
+Then I presented it with:
+
+```swift
+makeKeyAndOrderFront(nil)
+```
+
+The clear, active Liquid Glass appearance returned immediately.
+
+That confirmed the problem. There wasn’t another material behind the picker, and `.clear` wasn’t silently becoming `.regular`. The panel was inactive by design, so SwiftUI rendered the inactive version of the glass.
+
+Both behaviours make sense independently. Active glass looks better, but a typing utility shouldn’t steal keyboard focus just to obtain it.
+
+Sometimes a visual bug is really a window-management trade-off wearing a translucent capsule.

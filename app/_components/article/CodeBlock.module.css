@@ -1,0 +1,86 @@
+.codePanel {
+  background: var(--code-background, #fff);
+  margin: 2rem -1.5rem 2.65rem;
+  overflow-x: auto;
+  padding: 1.2rem 1.5rem 1.5rem;
+}
+
+.toolbar {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  min-height: 1.3rem;
+}
+
+.language,
+.copyButton {
+  color: var(--muted);
+  font-family: var(--font-funnel-sans), sans-serif;
+  font-size: 0.58rem;
+  font-variation-settings: 'wght' 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.copyButton {
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  padding: 0.3rem;
+  transition: opacity 140ms ease;
+}
+
+.codePanel:hover .copyButton,
+.copyButton:focus-visible {
+  opacity: 1;
+}
+
+.codePre,
+.fallback {
+  background: transparent !important;
+  color: var(--foreground);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0 !important;
+  overflow-x: visible !important;
+  padding: 1rem 0 0 !important;
+}
+
+.codeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.codePanel :global(.token.keyword),
+.codePanel :global(.token.function) {
+  color: #df4b25;
+}
+
+.codePanel :global(.token.property),
+.codePanel :global(.token.variable) {
+  color: #149ad0;
+}
+
+.codePanel :global(.token.string),
+.codePanel :global(.token.number) {
+  color: #9a4fa5;
+}
+
+.codePanel :global(.token.comment) {
+  color: var(--muted);
+}
+
+:global(:root[data-theme='dark']) .codePanel {
+  --code-background: #20232e;
+}
+
+@media (max-width: 37.5rem) {
+  .codePanel {
+    margin-inline: -0.75rem;
+    padding-inline: 0.75rem;
+  }
+
+  .copyButton {
+    opacity: 1;
+  }
+}

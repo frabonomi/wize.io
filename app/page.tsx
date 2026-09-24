@@ -1,17 +1,9 @@
 import Image from 'next/image';
 
 import { ElasticProjectLink } from './_components/ElasticProjectLink';
-import { ThemeToggle } from './_components/ThemeToggle';
+import { SiteHeader } from './_components/SiteHeader';
 import { projects, socialLinks } from './_data/links';
 import styles from './page.module.css';
-
-function Wordmark() {
-  return (
-    <span className={styles.wordmark}>
-      <strong>wize</strong> <span>io</span>
-    </span>
-  );
-}
 
 export default function Home() {
   return (
@@ -20,16 +12,7 @@ export default function Home() {
         Skip to content
       </a>
 
-      <header className={styles.siteHeader} id="top">
-        <a aria-label="wize.io, home" href="#top">
-          <Wordmark />
-        </a>
-
-        <nav aria-label="Primary navigation" className={styles.navigation}>
-          <a href="mailto:francesco@wize.io">Contact</a>
-          <ThemeToggle />
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main id="content">
         <section aria-labelledby="hero-title" className={styles.hero}>
