@@ -1,9 +1,9 @@
 .siteHeader {
   align-items: center;
   display: flex;
+  height: clamp(6rem, 15vw, 12rem);
   justify-content: space-between;
   padding-inline: var(--page-gutter);
-  padding-top: clamp(4rem, 5vw, 6rem);
 }
 
 .wordmark {
@@ -55,12 +55,6 @@
 .navigation a:hover {
   color: var(--foreground);
   transform: translateY(-0.08rem);
-}
-
-@media (max-width: 53.75rem) {
-  .siteHeader {
-    padding-top: 3rem;
-  }
 }
 
 @media (max-width: 37.5rem) {

@@ -1,15 +1,21 @@
 .article {
-  padding: clamp(5rem, 6vw, 6.5rem) var(--page-gutter) 10rem;
+  padding: 0 var(--page-gutter) 10rem;
 }
 
 .title {
   color: var(--accent);
+  filter: blur(0.06em);
   font-size: clamp(3rem, 4.2vw, 4.2rem);
   font-variation-settings: 'wght' 790;
   line-height: 1.16;
   margin: 0;
   max-width: 85rem;
   text-transform: uppercase;
+  transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    filter: blur(0);
+  }
 }
 
 .bodyColumn {
@@ -102,7 +108,6 @@
   line-height: 1.12;
   margin: 4.2rem 0 2.2rem;
   max-width: 32rem;
-  scroll-margin-top: 2rem;
   text-transform: uppercase;
 }
 

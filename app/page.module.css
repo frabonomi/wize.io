@@ -26,10 +26,11 @@
 
 .heroTitle {
   color: var(--accent);
+  filter: blur(0.06em);
   font-size: 10vw;
   font-variation-settings: 'wght' 790;
   line-height: 1;
-  margin: clamp(4rem, 4vw, 6rem) 0 0;
+  margin: 0;
   text-align: justify;
   text-align-last: left;
   text-transform: uppercase;
@@ -168,11 +169,6 @@
 }
 
 @media (max-width: 53.75rem) {
-  .heroTitle {
-    line-height: 1;
-    margin-top: clamp(2.5rem, 8vw, 7rem);
-  }
-
   .portraitStage {
     height: clamp(18rem, 77vw, 31rem);
     margin-top: 2.5rem;

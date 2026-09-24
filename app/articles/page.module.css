@@ -1,21 +1,26 @@
 .page {
-  padding: clamp(6rem, 8vw, 8rem) var(--page-gutter) 10rem;
+  padding: 0 var(--page-gutter) 10rem;
 }
 
 .title {
   color: var(--accent);
+  filter: blur(0.06em);
   font-size: clamp(4rem, 10vw, 9rem);
   font-variation-settings: 'wght' 790;
   line-height: 0.95;
   margin: 0;
   text-transform: uppercase;
+  transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    filter: blur(0);
+  }
 }
 
 .intro {
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   line-height: 1.4;
   margin: 3rem 0 7rem;
-  max-width: 35rem;
 }
 
 .list {
