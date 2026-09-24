@@ -13,6 +13,13 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Project structure
+
+`app/page.tsx` composes the portfolio page. Its interactive UI lives in
+`app/_components/` with colocated CSS Modules, and the project and social links
+live in `app/_data/links.ts`. Site-wide styles and metadata stay in the root
+layout.
+
 ## Quality checks
 
 ```bash

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
-import { ThemeScript } from '@/components/ThemeScript';
+import { ThemeScript } from './_components/ThemeScript';
 
 import './globals.css';
 

@@ -1,17 +1,9 @@
 import Image from 'next/image';
 
-import { ElasticProjectLink } from '@/components/ElasticProjectLink';
-import { ThemeToggle } from '@/components/ThemeToggle';
-
+import { ElasticProjectLink } from './_components/ElasticProjectLink';
+import { ThemeToggle } from './_components/ThemeToggle';
+import { projects, socialLinks } from './_data/links';
 import styles from './page.module.css';
-
-const projects: { name: string; url: string }[] = [
-  { name: 'Mowji', url: 'https://mowji.app/?ref=wize.io' },
-  {
-    name: 'Sober Ringtones',
-    url: 'https://sober-ringtones.wize.io/?ref=wize.io',
-  },
-];
 
 function Wordmark() {
   return (
@@ -52,7 +44,7 @@ export default function Home() {
                 alt="Halftone portrait of Francesco Bonomi"
                 className={styles.portrait}
                 height={855}
-                priority
+                preload
                 src="/images/francesco-halftone.png"
                 width={855}
               />
@@ -86,7 +78,6 @@ export default function Home() {
             alt="Duotone halftone study of hands at work"
             className={styles.imageBandImage}
             height={500}
-            loading="eager"
             sizes="100vw"
             src="/images/studio-halftone.png"
             width={1500}
@@ -98,42 +89,13 @@ export default function Home() {
             Follow me
           </h2>
           <ul className={styles.socialList}>
-            <li>
-              <a
-                href="https://x.com/frabonomi"
-                rel="me noreferrer"
-                target="_blank"
-              >
-                X
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://mastodon.social/@frabonomi"
-                rel="me noreferrer"
-                target="_blank"
-              >
-                Mastodon
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/frabonomi"
-                rel="me noreferrer"
-                target="_blank"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/fbonomi/"
-                rel="me noreferrer"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
-            </li>
+            {socialLinks.map(({ label, url }) => (
+              <li key={label}>
+                <a href={url} rel="me noreferrer" target="_blank">
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </section>
       </main>

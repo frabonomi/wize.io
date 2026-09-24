@@ -23,7 +23,7 @@
   }
 }
 
-.toggle .toggle:active {
+.toggle:active {
   transform: translateY(0.04rem);
 }
 

@@ -93,12 +93,6 @@
   text-transform: uppercase;
 }
 
-.heroLastLine {
-  display: block;
-  text-align: left;
-  text-align-last: left;
-}
-
 .portraitStage {
   height: clamp(27rem, 37vw, 35rem);
   margin-left: auto;
