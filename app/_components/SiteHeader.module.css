@@ -1,0 +1,69 @@
+.siteHeader {
+  align-items: center;
+  display: flex;
+  height: clamp(6rem, 15vw, 12rem);
+  justify-content: space-between;
+  padding-inline: var(--page-gutter);
+}
+
+.wordmark {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  &:hover {
+    strong {
+      letter-spacing: 0.8em;
+    }
+
+    span {
+      opacity: 0;
+      transform: translateX(2rem);
+    }
+  }
+}
+
+.wordmark strong {
+  font-variation-settings: 'wght' 760;
+  transition: letter-spacing 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.wordmark span {
+  color: var(--muted);
+  font-variation-settings: 'wght' 650;
+  transition: all 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navigation {
+  align-items: center;
+  display: flex;
+  gap: clamp(0.55rem, 1.25vw, 1.25rem);
+}
+
+.navigation a {
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-variation-settings: 'wght' 700;
+  letter-spacing: 0.14em;
+  padding-block: 0.35rem;
+  text-transform: uppercase;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.navigation a:hover {
+  color: var(--foreground);
+  transform: translateY(-0.08rem);
+}
+
+@media (max-width: 37.5rem) {
+  .navigation {
+    gap: 0.3rem;
+  }
+
+  .navigation a,
+  .wordmark {
+    font-size: 0.59rem;
+  }
+}

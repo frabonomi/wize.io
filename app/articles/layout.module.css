@@ -1,0 +1,15 @@
+.skipLink {
+  background: var(--foreground);
+  color: var(--background);
+  left: var(--page-gutter);
+  padding: 0.7rem 1rem;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-180%);
+  transition: transform 160ms ease;
+  z-index: 10;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}

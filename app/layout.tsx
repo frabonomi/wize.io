@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
-import { ThemeScript } from '@/components/ThemeScript';
+import { ThemeScript } from './_components/ThemeScript';
 
 import './globals.css';
 
@@ -15,6 +15,7 @@ const funnelSans = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wize.io'),
+  alternates: { types: { 'application/rss+xml': '/rss.xml' } },
   title: 'Francesco Bonomi — Developer and designer',
   description:
     'Francesco Bonomi is a developer and designer building apps and websites for clients and independent projects.',

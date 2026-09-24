@@ -1,0 +1,59 @@
+.figure {
+  margin: 2.7rem 0 3.5rem;
+}
+
+.naturalFrame,
+.croppedFrame,
+.videoFrame {
+  overflow: hidden;
+  width: 100%;
+}
+
+.croppedFrame {
+  aspect-ratio: 1.94;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.video {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.naturalFrame .image {
+  height: auto;
+}
+
+.croppedFrame .image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.videoFrame {
+  aspect-ratio: 16 / 9;
+  background: #0f1118;
+}
+
+.videoFrame iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  padding-top: 0.8rem;
+}
+
+@media (max-width: 37.5rem) {
+  .figure {
+    margin-block: 2.3rem 3rem;
+  }
+}

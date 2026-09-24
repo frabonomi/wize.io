@@ -1,5 +1,3 @@
-'use client';
-
 const themeScript = `
   (() => {
     try {
@@ -14,11 +12,5 @@ const themeScript = `
 `;
 
 export function ThemeScript() {
-  return (
-    <script
-      dangerouslySetInnerHTML={{ __html: themeScript }}
-      suppressHydrationWarning
-      type={typeof window === 'undefined' ? 'text/javascript' : 'text/plain'}
-    />
-  );
+  return <script dangerouslySetInnerHTML={{ __html: themeScript }} />;
 }
