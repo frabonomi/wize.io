@@ -51,9 +51,11 @@ to review it.
 
 Use Markdown code fences with a language name for highlighted code blocks.
 Import local images into the MDX file and render them with `ArticleImage`, which
-accepts `alt`, optional `caption`, and optional `cropped` props. Hosted video can
-use `VideoEmbed` with `provider="youtube"` or `provider="vimeo"`, a `videoId`,
-and a descriptive `title`. Headings at level two receive linkable IDs; for a
+accepts `alt`, optional `caption`, and optional `cropped` props. Keep local MP4
+files beside the MDX file, import them, and render them with `ArticleVideo` using
+the video's pixel `width` and `height`. Hosted video can use `VideoEmbed` with
+`provider="youtube"` or `provider="vimeo"`, a `videoId`, and a descriptive
+`title`. Headings at level two receive linkable IDs; for a
 long article, add an optional `toc` array to the article metadata with entries
 matching those IDs.
 

@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   turbopack: {
     root: process.cwd(),
+    rules: {
+      '*.mp4': { type: 'asset' },
+    },
   },
 };
 

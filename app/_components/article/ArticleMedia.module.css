@@ -18,6 +18,12 @@
   width: 100%;
 }
 
+.video {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .naturalFrame .image {
   height: auto;
 }

@@ -31,6 +31,37 @@ export function ArticleImage({
   );
 }
 
+type ArticleVideoProps = {
+  src: string;
+  width: number;
+  height: number;
+  caption?: string;
+};
+
+export function ArticleVideo({
+  src,
+  width,
+  height,
+  caption,
+}: ArticleVideoProps) {
+  return (
+    <figure className={styles.figure}>
+      <video
+        className={styles.video}
+        controls
+        height={height}
+        playsInline
+        preload="none"
+        width={width}
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support video playback.
+      </video>
+      {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+    </figure>
+  );
+}
+
 type VideoEmbedProps = {
   provider: 'youtube' | 'vimeo';
   videoId: string;

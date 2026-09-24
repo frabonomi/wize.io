@@ -1,10 +1,35 @@
+import img from './simpleanalytics-chart.png';
+import video from './simpleanalytics-interaction.mp4';
+
 export const article = {
   id: 'zfwjg',
   title: 'The tiny detail Simple Analytics added for screenshots',
   description: '',
   createdAt: '2026-09-24',
-  tags: [],
+  tags: ['details'],
   draft: true,
 };
 
-Start writing here.
+_Its logo stays quiet until you start taking one._
+
+While using [Simple Analytics](https://www.simpleanalytics.com/) on my last project, [Sober Ringtones](https://sober-ringtones.wize.io/), I noticed something odd in one of its charts.
+
+<ArticleImage
+  alt="Sober Ringtones website's analytics chart showing a prominent SimpleAnalytics logo in the bottom left corner"
+  cropped
+  src={img}
+/>
+
+When I held `⇧ + ⌘`, the small logo in the bottom-left corner became larger and fully opaque. I couldn’t see why two modifier keys should affect a chart, so I ignored it.
+
+A few days later, it clicked.
+
+The macOS screenshot shortcuts all use `⇧ + ⌘`: add `3` for the entire screen, `4` for a selected area, or `5` to open the Screenshot app.
+
+Simple Analytics responds to those first two keys by making its logo more visible just before the screenshot is taken. The interface stays quiet while you use the chart, but the name is easier to see in an image someone may share.
+
+I initially thought this might be accidental. [Simple Analytics later confirmed that it was intentional](https://www.linkedin.com/feed/update/urn:li:ugcPost:7301741589746388992?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7301741589746388992%2C7322921605196668929%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7301741589746388992%2C7322927971726450689%29).
+
+<ArticleVideo height={628} src={video} width={1026} />
+
+The logo asks for attention only when the chart is about to leave the product. The rest of the time, it gets out of the way.
