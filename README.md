@@ -4,7 +4,7 @@ Francesco Bonomi’s portfolio, built with Next.js, React, TypeScript, and CSS M
 
 ## Development
 
-Use Node.js 24.19.0 and pnpm 10.17.0.
+Use Node.js 24.19.0 and pnpm 10.34.5.
 
 ```bash
 pnpm install
