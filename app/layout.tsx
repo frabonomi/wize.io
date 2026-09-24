@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 
+import { ThemeScript } from '@/components/ThemeScript'
+
 import './globals.css'
 
 const funnelSans = localFont({
@@ -10,19 +12,6 @@ const funnelSans = localFont({
   variable: '--font-funnel-sans',
   weight: '300 800',
 })
-
-const themeScript = `
-  (() => {
-    try {
-      const savedTheme = localStorage.getItem('wize-theme');
-      const theme = savedTheme === 'dark' || savedTheme === 'light'
-        ? savedTheme
-        : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = theme;
-      document.documentElement.style.colorScheme = theme;
-    } catch {}
-  })();
-`
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wize.io'),
@@ -75,7 +64,7 @@ export default function RootLayout({
   return (
     <html className={funnelSans.variable} lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <ThemeScript />
       </head>
       <body>{children}</body>
     </html>

@@ -17,8 +17,7 @@
 .siteHeader,
 .hero,
 .projects,
-.social,
-.footer {
+.social {
   padding-inline: var(--page-gutter);
 }
 
@@ -219,13 +218,6 @@
   color: var(--accent);
 }
 
-.footer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: clamp(9rem, 16vw, 15rem);
-}
-
 @media (max-width: 53.75rem) {
   .siteHeader {
     padding-top: 2.25rem;
@@ -308,9 +300,5 @@
 
   .imageBand {
     aspect-ratio: 2.1 / 1;
-  }
-
-  .footer {
-    min-height: 10rem;
   }
 }

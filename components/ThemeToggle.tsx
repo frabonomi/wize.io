@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 
+import clsx from 'clsx'
+
 import styles from './ThemeToggle.module.css'
 
 type Theme = 'dark' | 'light'
@@ -26,11 +28,12 @@ export function ThemeToggle() {
   }
 
   const nextTheme = theme === 'light' ? 'dark' : 'light'
+  const isDark = theme === 'dark'
 
   return (
     <button
       aria-label={`Switch to ${nextTheme} theme`}
-      className={styles.toggle}
+      className={clsx(styles.toggle, isDark && styles.isDark)}
       onClick={toggleTheme}
       suppressHydrationWarning
       type="button"

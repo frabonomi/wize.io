@@ -137,12 +137,6 @@ export default function Home() {
           </ul>
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <a aria-label="Back to the top" href="#top">
-          <Wordmark />
-        </a>
-      </footer>
     </>
   )
 }

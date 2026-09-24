@@ -9,13 +9,21 @@
   min-width: 2rem;
   padding: 0.25rem;
   transition: transform 180ms ease;
+
+  &.isDark {
+    transform: rotate(180deg);
+
+    &:hover {
+      transform: translateY(-0.08rem) rotate(180deg);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-0.08rem);
+  }
 }
 
-.toggle:hover {
-  transform: translateY(-0.08rem);
-}
-
-.toggle:active {
+.toggle .toggle:active {
   transform: translateY(0.04rem);
 }
 

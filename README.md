@@ -21,3 +21,7 @@ pnpm lint
 pnpm typecheck
 pnpm build
 ```
+
+## Releases
+
+Run `pnpm release:dry` to preview the next version and changelog. Run `pnpm release` to update the version, changelog, commit, and tag using standard-version.
