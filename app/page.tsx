@@ -1,8 +1,9 @@
 import Image from 'next/image';
 
 import { ElasticProjectLink } from './_components/ElasticProjectLink';
+import { FollowMe } from './_components/FollowMe';
 import { SiteHeader } from './_components/SiteHeader';
-import { projects, socialLinks } from './_data/links';
+import { projects } from './_data/links';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -67,20 +68,9 @@ export default function Home() {
           />
         </figure>
 
-        <section aria-labelledby="social-title" className={styles.social}>
-          <h2 className={styles.sectionLabel} id="social-title">
-            Follow me
-          </h2>
-          <ul className={styles.socialList}>
-            {socialLinks.map(({ label, url }) => (
-              <li key={label}>
-                <a href={url} rel="me noreferrer" target="_blank">
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <div className={styles.followMe}>
+          <FollowMe />
+        </div>
       </main>
     </>
   );

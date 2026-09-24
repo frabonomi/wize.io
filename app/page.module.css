@@ -15,8 +15,7 @@
 }
 
 .hero,
-.projects,
-.social {
+.projects {
   padding-inline: var(--page-gutter);
 }
 
@@ -124,48 +123,9 @@
   width: 100%;
 }
 
-.social {
-  padding-bottom: clamp(8rem, 13vw, 12rem);
-  padding-top: clamp(7rem, 12vw, 11.5rem);
-}
-
-.social .sectionLabel {
-  margin-bottom: clamp(2.5rem, 4vw, 4rem);
-}
-
-.socialList {
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.socialList li {
-  align-items: center;
-  display: flex;
-  font-size: clamp(2.5rem, 4.7vw, 4.75rem);
-  font-variation-settings: 'wght' 420;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.socialList li + li::before {
-  background: var(--project-line);
-  content: '';
-  display: block;
-  height: clamp(0.6rem, 1.1vw, 1rem);
-  margin-right: 2rem;
-  width: clamp(0.6rem, 1.1vw, 1rem);
-}
-
-.socialList a {
-  transition: color 180ms ease;
-}
-
-.socialList a:hover {
-  color: var(--accent);
+.followMe {
+  padding: clamp(7rem, 12vw, 11.5rem) var(--page-gutter)
+    clamp(8rem, 13vw, 12rem);
 }
 
 @media (max-width: 53.75rem) {
@@ -198,39 +158,16 @@
   .projects {
     padding-top: 4rem;
   }
-
-  .socialList {
-    align-items: start;
-    flex-direction: column;
-  }
-
-  .socialList li + li::before {
-    display: none;
-  }
 }
 
 @media (max-width: 37.5rem) {
-  .sectionLabel {
-    font-size: 0.59rem;
-  }
-
-  .social {
+  .followMe {
     padding-bottom: 5rem;
     padding-top: 5.5rem;
   }
 
-  .socialList {
-    gap: 1rem;
-  }
-
-  .socialList li {
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
-  }
-
-  .socialList li + li::before {
-    height: 0.5rem;
-    margin-right: 0.75rem;
-    width: 0.5rem;
+  .sectionLabel {
+    font-size: 0.59rem;
   }
 
   .imageBand {

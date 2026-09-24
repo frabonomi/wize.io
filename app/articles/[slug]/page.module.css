@@ -185,6 +185,11 @@
   text-transform: uppercase;
 }
 
+.followMe {
+  padding-bottom: clamp(8rem, 13vw, 12rem);
+  padding-inline: var(--page-gutter);
+}
+
 @media (max-width: 48rem) {
   .article {
     padding-top: 5rem;
@@ -221,6 +226,10 @@
   }
 
   .more {
+    padding-bottom: 5rem;
+  }
+
+  .followMe {
     padding-bottom: 5rem;
   }
 

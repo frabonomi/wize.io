@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect, redirect } from 'next/navigation';
 
+import { FollowMe } from '@/app/_components/FollowMe';
 import { getVisibleArticle, getVisibleArticles } from '@/content/articles';
 
 import styles from './page.module.css';
@@ -146,6 +147,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </ul>
         </aside>
       )}
+      <div className={styles.followMe}>
+        <FollowMe />
+      </div>
     </>
   );
 }
