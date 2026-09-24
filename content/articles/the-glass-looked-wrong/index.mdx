@@ -2,12 +2,12 @@ import screenshot from './mowji-settings.jpg';
 
 export const article = {
   id: 'f66dn',
-  title: 'The glass looked broken because the window was behaving correctly',
+  title: 'The glass was broken because the window was behaving correctly',
   description:
     'A visual clue in Mowji revealed how window focus changes the appearance of clear Liquid Glass.',
   createdAt: '2026-09-24',
   tags: ['macOS', 'Mowji'],
-  draft: true,
+  publishedAt: '2026-09-25',
 };
 
 I’m building [Mowji](https://mowji.app), a macOS utility for finding and inserting emoji while typing.
@@ -18,13 +18,7 @@ There is one important constraint: the picker must not take keyboard focus.
 
 The editor, browser, or messaging app needs to remain focused so Mowji can keep the search synchronized and insert the selected emoji into the correct text field.
 
-This constraint caused a visual problem _I wasn’t expecting_.
-
-<ArticleImage
-  alt="Mowji's settings window showing General, Search, Appearance, and Exclusions panes"
-  cropped
-  src={screenshot}
-/>
+This constraint caused a visual problem I wasn’t expecting.
 
 ## Same picker, two different results
 
