@@ -1,4 +1,4 @@
-# Wize.io
+# wize.io
 
 Francesco Bonomi’s portfolio, built with Next.js, React, TypeScript, and CSS Modules.
 

@@ -16,7 +16,7 @@ const projects: { name: string; url: string }[] = [
 function Wordmark() {
   return (
     <span className={styles.wordmark}>
-      <strong>Wize</strong> <span>io</span>
+      <strong>wize</strong> <span>io</span>
     </span>
   );
 }
@@ -29,7 +29,7 @@ export default function Home() {
       </a>
 
       <header className={styles.siteHeader} id="top">
-        <a aria-label="Wize.io, home" href="#top">
+        <a aria-label="wize.io, home" href="#top">
           <Wordmark />
         </a>
 

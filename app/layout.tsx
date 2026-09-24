@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    siteName: 'Wize.io',
+    siteName: 'wize.io',
     type: 'website',
     url: '/',
   },
