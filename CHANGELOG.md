@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/frabonomi/wize.io/compare/v0.9.6...v2.0.0) (2026-09-24)
+
+
+### Features
+
+* redesign portfolio with Next.js ([#9](https://github.com/frabonomi/wize.io/issues/9)) ([e7f917f](https://github.com/frabonomi/wize.io/commit/e7f917fbceda87d0c504b866bd22867313e8cde7))
+* animate wordmark hover ([d60cbc7](https://github.com/frabonomi/wize.io/commit/d60cbc7fef011195484c683692fe23b2f3a5b234))
+
+
+### Bug Fixes
+
+* misc styling and next config fixes ([6b261a3](https://github.com/frabonomi/wize.io/commit/6b261a324e84f82eaf001adac62e8413a4f983fa))
+
 ### [0.9.6](https://github.com/frabonomi/wize.io/compare/v0.9.5...v0.9.6) (2025-02-06)
 
 
