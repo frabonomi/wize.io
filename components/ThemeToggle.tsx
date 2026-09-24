@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-import styles from './ThemeToggle.module.css'
+import styles from './ThemeToggle.module.css';
 
-type Theme = 'dark' | 'light'
+type Theme = 'dark' | 'light';
 
-const storageKey = 'wize-theme'
+const storageKey = 'wize-theme';
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() =>
@@ -16,19 +16,19 @@ export function ThemeToggle() {
     document.documentElement.dataset.theme === 'dark'
       ? 'dark'
       : 'light',
-  )
+  );
 
   function toggleTheme() {
-    const nextTheme: Theme = theme === 'light' ? 'dark' : 'light'
+    const nextTheme: Theme = theme === 'light' ? 'dark' : 'light';
 
-    document.documentElement.dataset.theme = nextTheme
-    document.documentElement.style.colorScheme = nextTheme
-    localStorage.setItem(storageKey, nextTheme)
-    setTheme(nextTheme)
+    document.documentElement.dataset.theme = nextTheme;
+    document.documentElement.style.colorScheme = nextTheme;
+    localStorage.setItem(storageKey, nextTheme);
+    setTheme(nextTheme);
   }
 
-  const nextTheme = theme === 'light' ? 'dark' : 'light'
-  const isDark = theme === 'dark'
+  const nextTheme = theme === 'light' ? 'dark' : 'light';
+  const isDark = theme === 'dark';
 
   return (
     <button
@@ -56,5 +56,5 @@ export function ThemeToggle() {
         <circle cx="8.485" cy="8.485" r="6" stroke="currentColor" />
       </svg>
     </button>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import { ElasticProjectLink } from '@/components/ElasticProjectLink'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { ElasticProjectLink } from '@/components/ElasticProjectLink';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
-import styles from './page.module.css'
+import styles from './page.module.css';
 
 const projects: { name: string; url: string }[] = [
   { name: 'Mowji', url: 'https://mowji.app/?ref=wize.io' },
@@ -11,14 +11,14 @@ const projects: { name: string; url: string }[] = [
     name: 'Sober Ringtones',
     url: 'https://sober-ringtones.wize.io/?ref=wize.io',
   },
-]
+];
 
 function Wordmark() {
   return (
     <span className={styles.wordmark}>
       <strong>Wize</strong> <span>io</span>
     </span>
-  )
+  );
 }
 
 export default function Home() {
@@ -138,5 +138,5 @@ export default function Home() {
         </section>
       </main>
     </>
-  )
+  );
 }

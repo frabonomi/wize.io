@@ -1,9 +1,9 @@
-import type { Metadata, Viewport } from 'next'
-import localFont from 'next/font/local'
+import type { Metadata, Viewport } from 'next';
+import localFont from 'next/font/local';
 
-import { ThemeScript } from '@/components/ThemeScript'
+import { ThemeScript } from '@/components/ThemeScript';
 
-import './globals.css'
+import './globals.css';
 
 const funnelSans = localFont({
   src: '../public/fonts/FunnelSans.woff2',
@@ -11,7 +11,7 @@ const funnelSans = localFont({
   style: 'normal',
   variable: '--font-funnel-sans',
   weight: '300 800',
-})
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wize.io'),
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+};
 
 export const viewport: Viewport = {
   colorScheme: 'light dark',
@@ -54,12 +54,12 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: light)', color: '#e7f0fe' },
     { media: '(prefers-color-scheme: dark)', color: '#14161f' },
   ],
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html className={funnelSans.variable} lang="en" suppressHydrationWarning>
@@ -68,5 +68,5 @@ export default function RootLayout({
       </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }

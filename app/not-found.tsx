@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import styles from './not-found.module.css'
+import styles from './not-found.module.css';
 
 export default function NotFound() {
   return (
@@ -9,5 +9,5 @@ export default function NotFound() {
       <h1>The page you’re looking for is not here.</h1>
       <Link href="/">Return home</Link>
     </main>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 const themeScript = `
   (() => {
@@ -11,7 +11,7 @@ const themeScript = `
       document.documentElement.style.colorScheme = theme;
     } catch {}
   })();
-`
+`;
 
 export function ThemeScript() {
   return (
@@ -20,5 +20,5 @@ export function ThemeScript() {
       suppressHydrationWarning
       type={typeof window === 'undefined' ? 'text/javascript' : 'text/plain'}
     />
-  )
+  );
 }
