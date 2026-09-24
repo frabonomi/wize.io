@@ -32,15 +32,27 @@
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+
+  &:hover {
+    strong {
+      letter-spacing: 0.8em;
+    }
+    span {
+      opacity: 0;
+      transform: translateX(2rem);
+    }
+  }
 }
 
 .wordmark strong {
   font-variation-settings: 'wght' 760;
+  transition: letter-spacing 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .wordmark span {
   color: var(--muted);
   font-variation-settings: 'wght' 650;
+  transition: all 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .navigation {
