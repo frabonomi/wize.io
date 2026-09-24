@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect, redirect } from 'next/navigation';
 
 import { getVisibleArticle, getVisibleArticles } from '@/content/articles';
 
@@ -17,8 +17,6 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
   year: 'numeric',
 });
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return getVisibleArticles().map(({ slug }) => ({ slug }));
 }
@@ -34,7 +32,7 @@ export async function generateMetadata({
   }
 
   const { metadata } = article;
-  const url = `/articles/${slug}`;
+  const url = `/articles/${article.slug}`;
 
   return {
     title: `${metadata.title} — Francesco Bonomi`,
@@ -68,6 +66,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
+  if (slug !== article.slug) {
+    const canonicalUrl = `/articles/${article.slug}`;
+    if (article.metadata.draft) redirect(canonicalUrl);
+    permanentRedirect(canonicalUrl);
+  }
+
   const { Content, metadata } = article;
   const moreArticles = getVisibleArticles()
     .filter((candidate) => candidate.slug !== slug)
@@ -82,11 +86,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className={styles.details}>
             <div>
               {metadata.draft && (
-                <span className={styles.draft}>Draft preview · </span>
+                <span className={styles.draft}>
+                  Draft preview{metadata.publishedAt ? ' · ' : ''}
+                </span>
               )}
-              <time dateTime={metadata.publishedAt}>
-                {dateFormatter.format(new Date(metadata.publishedAt))}
-              </time>
+              {metadata.publishedAt && (
+                <time dateTime={metadata.publishedAt}>
+                  {dateFormatter.format(new Date(metadata.publishedAt))}
+                </time>
+              )}
               {metadata.updatedAt && (
                 <span className={styles.updated}>
                   Updated {dateFormatter.format(new Date(metadata.updatedAt))}
@@ -127,9 +135,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <li key={moreSlug}>
                 <a href={`/articles/${moreSlug}`}>
                   <span>{more.title}</span>
-                  <time dateTime={more.publishedAt}>
-                    {dateFormatter.format(new Date(more.publishedAt))}
-                  </time>
+                  {more.publishedAt && (
+                    <time dateTime={more.publishedAt}>
+                      {dateFormatter.format(new Date(more.publishedAt))}
+                    </time>
+                  )}
                 </a>
               </li>
             ))}

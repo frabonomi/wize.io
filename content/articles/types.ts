@@ -1,10 +1,17 @@
-export type ArticleMetadata = {
+type ArticleMetadataBase = {
+  id: string;
   title: string;
   description: string;
-  publishedAt: string;
+  createdAt: string;
   updatedAt?: string;
   tags: string[];
-  draft: boolean;
+  slugOverride?: string;
   ogImage?: string;
   toc?: { id: string; label: string }[];
 };
+
+export type ArticleMetadata = ArticleMetadataBase &
+  (
+    | { draft: true; publishedAt?: string }
+    | { draft: false; publishedAt: string }
+  );

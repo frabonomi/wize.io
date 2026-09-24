@@ -20,7 +20,7 @@ export function GET() {
         '<item>',
         `<title>${escapeXml(metadata.title)}</title>`,
         `<link>${escapeXml(url)}</link>`,
-        `<guid>${escapeXml(url)}</guid>`,
+        `<guid isPermaLink="false">wize.io:article:${metadata.id}</guid>`,
         `<description>${escapeXml(metadata.description)}</description>`,
         `<pubDate>${new Date(metadata.publishedAt).toUTCString()}</pubDate>`,
         '</item>',
