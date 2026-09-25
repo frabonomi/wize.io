@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import { ElasticProjectLink } from './_components/ElasticProjectLink';
 import { FollowMe } from './_components/FollowMe';
+import { HeroTitle } from './_components/HeroTitle';
 import { SiteHeader } from './_components/SiteHeader';
 import { projects } from './_data/links';
 import styles from './page.module.css';
@@ -17,10 +18,7 @@ export default function Home() {
 
       <main id="content">
         <section aria-labelledby="hero-title" className={styles.hero}>
-          <h1 className={styles.heroTitle} id="hero-title">
-            I’m Francesco, a developer and designer. <br /> I build apps and
-            websites for myself and clients.
-          </h1>
+          <HeroTitle />
 
           <div className={styles.portraitStage}>
             <div className={styles.portraitArtwork}>

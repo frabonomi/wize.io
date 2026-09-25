@@ -5,9 +5,7 @@
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
-  min-height: 2rem;
-  min-width: 2rem;
-  padding: 0.25rem;
+  padding: 0rem;
   transition: transform 180ms ease;
 
   &.isDark {

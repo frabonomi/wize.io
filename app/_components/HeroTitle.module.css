@@ -1,0 +1,17 @@
+.heroTitle {
+  color: var(--accent);
+  filter: blur(var(--hero-blur, 0.06em));
+  font-size: 10vw;
+  font-variation-settings: 'wght' 790;
+  line-height: 1;
+  margin: 0;
+  text-align: justify;
+  text-align-last: left;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroTitle {
+    filter: none;
+  }
+}

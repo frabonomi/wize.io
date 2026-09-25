@@ -23,18 +23,6 @@
   overflow: clip;
 }
 
-.heroTitle {
-  color: var(--accent);
-  filter: blur(0.06em);
-  font-size: 10vw;
-  font-variation-settings: 'wght' 790;
-  line-height: 1;
-  margin: 0;
-  text-align: justify;
-  text-align-last: left;
-  text-transform: uppercase;
-}
-
 .portraitStage {
   height: clamp(27rem, 37vw, 35rem);
   margin-left: auto;
